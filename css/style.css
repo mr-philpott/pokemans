@@ -15,5 +15,15 @@ body .container {
   display: flex;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
+<<<<<<< HEAD
+=======
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.container img {
+  max-width: 300px;
+>>>>>>> 33ec14efd9133317b425a0cd1df411531b4e5fbe
 }
 /*# sourceMappingURL=style.css.map */

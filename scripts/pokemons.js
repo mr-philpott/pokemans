@@ -260,7 +260,12 @@ createIdDiv(pokeObj)
 
 function createIdDiv(obj){
 const NAME = document.createElement('h1');
+NAME.textContent = obj['name'];
 const ID = document.createElement('h1');
+ID.textContent = `#00${obj['id']}`;
+
+id.appendChild(NAME)
+id.appendChild(ID)
 }
 
 // function createInfoDiv(obj){}

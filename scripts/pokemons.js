@@ -214,6 +214,16 @@ let charizrd = `{
     "weight": 905
 }`
 
-// let file = window.location.pathname // /charmander.html
-// file = split to get rid of / and .html
-// file = .json
+// when the page loads get which page it is
+//load the page depending on which page you're on
+window.addEventListener('load', function(){
+let file = window.location.pathname;
+file = file.split('/');
+for(i in file){
+  if(i == file.length - 1){
+    file = file[i];
+    file = file.split('.')
+    file = file[0]
+  }
+}
+});

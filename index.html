@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,20 +10,44 @@
     <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet"> -->
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
     <h1><img src="https://fontmeme.com/permalink/210414/e9bac3fcf69be46f803839740978871e.png" alt="pokemon-font" border="0"></h1>
     <!-- <h1 id="title">Pokemans</h1> -->
 
     <div class="container">
-        <div id="charmander">
-            <a href="pages/charmander.html"><img src="POKEMONBACK.png" alt="display"></a>
+        <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+            <div class="flipper">
+                <div class="front">
+                    <img src="POKEMONBACK.png" alt="display">
+                </div>
+                <div class="back">
+                    <a href="pages/charmander.html"><img src="charmanderImg.png" alt="Charmander card image"></a>
+                </div>
+            </div>
         </div>
-        <div id="charmeleon">
-            <a href="pages/charizard.html"><img src="POKEMONBACK.png" alt="display"></a>
+
+        <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+            <div class="flipper">
+                <div class="front">
+                    <img src="POKEMONBACK.png" alt="display">
+                </div>
+                <div class="back">
+                    <a href="pages/charmeleon.html"><img src="charmeleonImg.png" alt="Charmeleon card image"></a>
+                </div>
+            </div>
         </div>
-        <div id="charizard">
-            <a href="pages/charmeleon.html"><img src="POKEMONBACK.png" alt="display"></a>
-        </d  iv>
+
+        <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+            <div class="flipper">
+                <div class="front">
+                    <img src="POKEMONBACK.png" alt="display">
+                </div>
+                <div class="back">
+                    <a href="pages/charizard.html"><img src="charizardImg.png" alt="Charizard card image"></a>
+                </div>
+            </div>
+        </div>
     </div>
 
     <script src="main.js"></script>

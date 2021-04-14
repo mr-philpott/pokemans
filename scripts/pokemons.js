@@ -255,7 +255,7 @@ let id = document.getElementById('id');
 let stats = document.getElementById('stats');
 
 createIdDiv(pokeObj)
-createStatsDiv(pokeObj)
+// createStatsDiv(pokeObj)
 
 
 function createIdDiv(obj){
@@ -263,8 +263,6 @@ const NAME = document.createElement('h1');
 const ID = document.createElement('h1');
 }
 
-function createInfoDiv(obj){
-  
-}
+// function createInfoDiv(obj){}
 
 });

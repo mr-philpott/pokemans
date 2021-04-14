@@ -65,3 +65,13 @@ body {
 .back {
     transform: rotateY(180deg);
 }
+
+footer {
+	position: fixed;
+	width: 100%;
+	left: 0;
+	bottom: 0;
+	background-color: #2a75bb;
+	color: white;
+	text-align: center;
+}

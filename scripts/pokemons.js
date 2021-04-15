@@ -252,11 +252,9 @@ if(file == 'charizard'){
 }
 
 let id = document.getElementById('id');
-let stats = document.getElementById('stats');
 
 createIdDiv(pokeObj)
-// createStatsDiv(pokeObj)
-
+createStatsDiv(pokeObj)
 
 function createIdDiv(obj){
 const NAME = document.createElement('h1');
@@ -268,6 +266,6 @@ id.appendChild(NAME)
 id.appendChild(ID)
 }
 
-// function createInfoDiv(obj){}
 
-});
+
+//takes out stats from array - Ahiram

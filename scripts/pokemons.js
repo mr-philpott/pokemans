@@ -139,7 +139,7 @@ let charmeleon = `{
     "weight": 190
 }`
 
-let charizrd = `{
+let charizard = `{
     "abilities": [
       {
         "name": "blaze"

@@ -215,6 +215,17 @@ let charizard = `{
     "weight": 905
 }`
 
+
+// left:
+// name & id
+// base xp & type
+// height & weight
+// abilities
+
+// right:
+// stats
+
+
 // when the page loads get which page it is
 //load the page depending on which page you're on
 window.addEventListener('load', function(){
@@ -227,4 +238,36 @@ for(i in file){
     file = file[0]
   }
 }
+
+
+let pokeObj;
+if(file == 'charmander'){
+  pokeObj = JSON.parse(charmander)
+}
+if(file == 'charmeleon'){
+  pokeObj = JSON.parse(charmeleon)
+}
+if(file == 'charizard'){
+  pokeObj = JSON.parse(charizrd)
+}
+
+let id = document.getElementById('id');
+let stats = document.getElementById('stats');
+
+createIdDiv(pokeObj)
+// createStatsDiv(pokeObj)
+
+
+function createIdDiv(obj){
+const NAME = document.createElement('h1');
+NAME.textContent = obj['name'];
+const ID = document.createElement('h1');
+ID.textContent = `#00${obj['id']}`;
+
+id.appendChild(NAME)
+id.appendChild(ID)
+}
+
+// function createInfoDiv(obj){}
+
 });

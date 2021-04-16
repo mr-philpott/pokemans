@@ -287,7 +287,7 @@ window.addEventListener('load', function () {
       DIV.appendChild(ITEM1)
       id.appendChild(DIV)
     }
-    
+
     // HEIGHT
     const HEIGHT = document.createElement('h4');
     let height = String(obj["height"])
@@ -304,14 +304,26 @@ window.addEventListener('load', function () {
     id.appendChild(WEIGHT)
   }
 
-  function createStatsDiv(obj) { }
+
+  function createStatsDiv(obj) {
+    // Creating the stats
+    const STAT = obj["stats"];
+
+    for (stat of STAT) {
+      const { base_stat } = stat
+      const name = stat.stat.name;
+      const LIST = document.createElement("p")
+      LIST.textContent = name + " " + base_stat
+      stats.appendChild(LIST)
+    }
+    
+  }
 
 
-//takes out stats from array - Ahiram
-
-createStatDiv(pokeObj);
+  //takes out stats from array - Ahiram
 
 
+});
 // let stats = document.getElementById('stats');
 // const STATS = obj["stats"];
 
@@ -324,4 +336,3 @@ createStatDiv(pokeObj);
 
 // const{base_stat} = rat;
 //   console.log(rat);
-

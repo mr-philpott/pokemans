@@ -139,7 +139,7 @@ let charmeleon = `{
     "weight": 190
 }`
 
-let charizrd = `{
+let charizard = `{
     "abilities": [
       {
         "name": "blaze"
@@ -220,54 +220,90 @@ let charizrd = `{
 // name & id
 // base xp & type
 // height & weight
-// abilities
 
 // right:
+// abilities
 // stats
 
 
 // when the page loads get which page it is
 //load the page depending on which page you're on
-window.addEventListener('load', function(){
-let file = window.location.pathname;
-file = file.split('/');
-for(i in file){
-  if(i == file.length - 1){
-    file = file[i];
-    file = file.split('.')
-    file = file[0]
+window.addEventListener('load', function () {
+  let file = window.location.pathname;
+  file = file.split('/');
+  for (i in file) {
+    if (i == file.length - 1) {
+      file = file[i];
+      file = file.split('.')
+      file = file[0]
+    }
   }
-}
 
 
-let pokeObj;
-if(file == 'charmander'){
-  pokeObj = JSON.parse(charmander)
-}
-if(file == 'charmeleon'){
-  pokeObj = JSON.parse(charmeleon)
-}
-if(file == 'charizard'){
-  pokeObj = JSON.parse(charizrd)
-}
+  let pokeObj;
+  if (file == 'charmander') {
+    pokeObj = JSON.parse(charmander)
+  }
+  if (file == 'charmeleon') {
+    pokeObj = JSON.parse(charmeleon)
+  }
+  if (file == 'charizard') {
+    pokeObj = JSON.parse(charizard)
+  }
 
-let id = document.getElementById('id');
-let stats = document.getElementById('stats');
+  let id = document.getElementById('id');
+  let stats = document.getElementById('stats');
 
-createIdDiv(pokeObj)
-// createStatsDiv(pokeObj)
+  createIdDiv(pokeObj)
+  createStatsDiv(pokeObj)
 
 
-function createIdDiv(obj){
-const NAME = document.createElement('h1');
-NAME.textContent = obj['name'];
-const ID = document.createElement('h1');
-ID.textContent = `#00${obj['id']}`;
+  function createIdDiv(obj) {
+    // NAME
+    const NAME = document.createElement('h1');
+    NAME.textContent = obj["name"];
+    id.appendChild(NAME);
 
-id.appendChild(NAME)
-id.appendChild(ID)
-}
+    // ID
+    const ID = document.createElement('h1');
+    ID.textContent = `#00${obj["id"]}`;
+    id.appendChild(ID);
 
-// function createInfoDiv(obj){}
+    // BASE EXPERIENCE
+    const XP = document.createElement('h3');
+    XP.textContent = `Base XP: ${obj["base_experience"]}`;
+    id.appendChild(XP);
+
+    // TYPES
+    const TYPES = obj["types"];
+    for (type in TYPES) {
+      const DIV = document.createElement('div');
+
+      const TYPE = TYPES[type]["type"];
+      const { name } = TYPE;
+
+      const ITEM1 = document.createElement('p');
+      ITEM1.textContent = name;
+      DIV.appendChild(ITEM1)
+      id.appendChild(DIV)
+    }
+    
+    // HEIGHT
+    const HEIGHT = document.createElement('h4');
+    let height = String(obj["height"])
+    height = height.split('')
+    // HEIGHT.textContent = obj["height"];
+    // id.appendChild(HEIGHT);
+
+    const WEIGHT = document.createElement('h4');
+    let weight = String(obj["weight"]);
+    weight = weight.split('')
+    weight.splice(weight.length - 1, 0, '.');
+    weight = `${weight.join('')} kg`
+    WEIGHT.textContent = weight;
+    id.appendChild(WEIGHT)
+  }
+
+  function createStatsDiv(obj) { }
 
 });

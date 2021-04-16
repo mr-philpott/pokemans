@@ -229,6 +229,7 @@ let charizard = `{
 // when the page loads get which page it is
 //load the page depending on which page you're on
 window.addEventListener('load', function () {
+  // document.body.style.backgroundImage = "url('../pages/images/Background.jpg')";
   let file = window.location.pathname;
   file = file.split('/');
   for (i in file) {
@@ -253,6 +254,7 @@ window.addEventListener('load', function () {
 
   let id = document.getElementById('id');
   let stats = document.getElementById('stats');
+  let img = document.getElementById('image')
 
   createIdDiv(pokeObj)
   createStatsDiv(pokeObj)
@@ -327,20 +329,5 @@ window.addEventListener('load', function () {
     
   }
 
-
-  //takes out stats from array - Ahiram
-
-
 });
-// let stats = document.getElementById('stats');
-// const STATS = obj["stats"];
 
-// function createStatDiv(obj){
-//   let stats = document.getElementById('stats');
-//   const STATS = obj["stats"];
-//   const{base_stat} = rat;
-//   console.log(base_stat)
-// };
-
-// const{base_stat} = rat;
-//   console.log(rat);

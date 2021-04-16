@@ -292,36 +292,26 @@ window.addEventListener('load', function () {
     const HEIGHT = document.createElement('h4');
     let height = String(obj["height"])
     height = height.split('')
-    // HEIGHT.textContent = obj["height"];
-    // id.appendChild(HEIGHT);
+    if(height.length ==  1){
+      height.splice(height.length - 1, 0, '.');
+      height = `0${height.join('')} m`;
+    }else{
+      height.splice(height.length - 1, 0, '.');
+      height = `${height.join('')} m`;
+    }
+    HEIGHT.textContent = height;
+    id.appendChild(HEIGHT);
 
+    // WEIGHT
     const WEIGHT = document.createElement('h4');
     let weight = String(obj["weight"]);
     weight = weight.split('')
     weight.splice(weight.length - 1, 0, '.');
-    weight = `${weight.join('')} kg`
+    weight = `${weight.join('')} kg`;
     WEIGHT.textContent = weight;
-    id.appendChild(WEIGHT)
+    id.appendChild(WEIGHT);
   }
 
   function createStatsDiv(obj) { }
 
-
-//takes out stats from array - Ahiram
-
-createStatDiv(pokeObj);
-
-
-// let stats = document.getElementById('stats');
-// const STATS = obj["stats"];
-
-// function createStatDiv(obj){
-//   let stats = document.getElementById('stats');
-//   const STATS = obj["stats"];
-//   const{base_stat} = rat;
-//   console.log(base_stat)
-// };
-
-// const{base_stat} = rat;
-//   console.log(rat);
-
+});

@@ -269,3 +269,20 @@ id.appendChild(ID)
 
 
 //takes out stats from array - Ahiram
+
+createStatDiv(pokeObj);
+
+
+// let stats = document.getElementById('stats');
+// const STATS = obj["stats"];
+
+// function createStatDiv(obj){
+//   let stats = document.getElementById('stats');
+//   const STATS = obj["stats"];
+//   const{base_stat} = rat;
+//   console.log(base_stat)
+// };
+
+// const{base_stat} = rat;
+//   console.log(rat);
+

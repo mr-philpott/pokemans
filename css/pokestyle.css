@@ -1,7 +1,69 @@
 body {
-  background-image: url("../pages/images/Background.jpg");
+  background: -webkit-gradient(linear, left top, left bottom, from(#FFE26f), to(#F15F3E)) no-repeat center center fixed;
+  background: linear-gradient(#FFE26f, #F15F3E) no-repeat center center fixed;
   background-size: cover;
+  color: black;
+  font-family: "pokeFont";
+  letter-spacing: 2px;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.container div {
+  width: 350px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#id ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-left: 0;
+  list-style-type: none;
+}
+
+#id ul li {
+  letter-spacing: 4px;
+  font-size: 2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+#id ul li:first-child {
+  margin-right: 20px;
+}
+
+#stats {
+  text-align: end;
+}
+
+#image {
+  margin: 20px;
+}
+
+img {
+  height: 500px;
   background-repeat: no-repeat;
   color: white;
+}
+
+@font-face {
+  font-family: "pokeFont";
+  src: url("../PokeSolid.ttf");
 }
 /*# sourceMappingURL=pokestyle.css.map */

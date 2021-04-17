@@ -1,15 +1,61 @@
 body{
-    background-image: url('../pages/images/Background.jpg');
-    // background: linear-gradient(#fcd26f, #f5796f);
+    background: linear-gradient(#FFE26f, #F15F3E) no-repeat center center fixed;
     background-size: cover;
+    color: black;
+    font-family: "pokeFont";
+    letter-spacing: 2px;
+}
+
+.container{
+    // position: fixed;
+    // top: 50%;
+    // left: 50%;
+    // transform: translate(-50%, -50%);
+
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+
+    div{
+        width: 350px;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+#id{
+    ul{
+        display: flex;
+        // justify-content: space-evenly;
+        padding-left: 0;
+        list-style-type: none;
+
+        li{
+            &:first-child{
+                margin-right: 20px;
+            }
+            letter-spacing: 4px;
+            font-size: 2rem;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+    }
+}
+
+#stats{
+    text-align: end;
+}
+
+#image{
+    margin: 20px;
+}
+img{
+    height: 500px;
     background-repeat: no-repeat;
     color: white;
 }
 
-h1, p{
-    font-family: pokeFont;
-}
 @font-face{
-    font-family: pokeFont;
+    font-family: "pokeFont";
     src: url("../PokeSolid.ttf");
 }

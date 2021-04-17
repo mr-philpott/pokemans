@@ -1,6 +1,6 @@
 body {
-  background: -webkit-gradient(linear, left top, left bottom, from(#FFE26f), to(#F15F3E)) no-repeat center center fixed;
-  background: linear-gradient(#FFE26f, #F15F3E) no-repeat center center fixed;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ffe26f), to(#f15f3e)) no-repeat center center fixed;
+  background: linear-gradient(#ffe26f, #f15f3e) no-repeat center center fixed;
   background-size: cover;
   color: black;
   font-family: "pokeFont";
@@ -8,6 +8,7 @@ body {
 }
 
 .container {
+  margin: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -33,6 +34,9 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding-left: 0;
   list-style-type: none;
 }
@@ -48,16 +52,63 @@ body {
   margin-right: 20px;
 }
 
+#id h2 {
+  margin: 0px;
+  text-align: center;
+}
+
+#id h4 {
+  text-align: center;
+  margin: 0px;
+}
+
+#id div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+#id div h4:nth-child(2) {
+  margin-left: 20px;
+}
+
 #stats {
-  text-align: end;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+#stats h2 {
+  letter-spacing: 4px;
+  font-size: 2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+#stats p {
+  margin-top: 0;
+  margin-bottom: 30px;
+}
+
+#stats p:last-child {
+  margin-bottom: 0;
 }
 
 #image {
+  width: 600px;
   margin: 20px;
 }
 
-img {
-  height: 500px;
+#image img {
+  margin: auto;
+  min-width: 350px;
+  max-width: 450px;
   background-repeat: no-repeat;
   color: white;
 }

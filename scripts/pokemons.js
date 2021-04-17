@@ -289,15 +289,22 @@ window.addEventListener('load', function () {
     id.appendChild(LIST1);
 
     // BASE EXPERIENCE
+    const XPHEAD = document.createElement("h2")
+    XPHEAD.textContent = `Base XP`
+    id.appendChild(XPHEAD)
+
     const XP = document.createElement('h4');
-    XP.textContent = `Base XP: ${obj["base_experience"]}`;
+    XP.textContent = obj["base_experience"];
     id.appendChild(XP);
 
     // TYPES
-    const TYPES = obj["types"];
-    for (type in TYPES) {
-      const DIV = document.createElement('div');
+    TYPEHEAD = document.createElement('h2')
+    TYPEHEAD.textContent = `Types`
+    id.appendChild(TYPEHEAD)
 
+    const TYPES = obj["types"];
+    const DIV = document.createElement('div');
+    for (type in TYPES) {
       const TYPE = TYPES[type]["type"];
       const { name } = TYPE;
 
@@ -308,6 +315,10 @@ window.addEventListener('load', function () {
     }
 
     // HEIGHT
+    const HEIHEAD = document.createElement('h2')
+    HEIHEAD.textContent = `Height`
+    id.appendChild(HEIHEAD)
+
     const HEIGHT = document.createElement('h4');
     let height = String(obj["height"])
     height = height.split('')
@@ -322,6 +333,10 @@ window.addEventListener('load', function () {
     id.appendChild(HEIGHT);
 
     // WEIGHT
+    const WEIHEAD = document.createElement('h2')
+    WEIHEAD.textContent = `Weight`
+    id.appendChild(WEIHEAD)
+
     const WEIGHT = document.createElement('h4');
     let weight = String(obj["weight"]);
     weight = weight.split('')
@@ -333,6 +348,9 @@ window.addEventListener('load', function () {
 
 
   function createStatsDiv(obj) {
+    const STATSHEADER = document.createElement('h2');
+    STATSHEADER.textContent = `Stats`
+    stats.appendChild(STATSHEADER)
     // Creating the stats
     const STAT = obj["stats"];
 
@@ -340,10 +358,9 @@ window.addEventListener('load', function () {
       const { base_stat } = stat
       const name = stat.stat.name;
       const PARA = document.createElement("p")
-      PARA.textContent = name + " " + base_stat
+      PARA.textContent = name + " - " + base_stat
       stats.appendChild(PARA)
     }
-
   }
 
 });

@@ -1,37 +1,33 @@
-body{
-    background: linear-gradient(#FFE26f, #F15F3E) no-repeat center center fixed;
+body {
+    background: linear-gradient(#ffe26f, #f15f3e) no-repeat center center fixed;
     background-size: cover;
     color: black;
     font-family: "pokeFont";
     letter-spacing: 2px;
 }
 
-.container{
-    // position: fixed;
-    // top: 50%;
-    // left: 50%;
-    // transform: translate(-50%, -50%);
-
+.container {
+    margin: auto;
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-evenly;
 
-    div{
+    div {
         width: 350px;
         display: flex;
         flex-direction: column;
     }
 }
 
-#id{
-    ul{
+#id {
+    ul {
         display: flex;
-        // justify-content: space-evenly;
+        justify-content: center;
         padding-left: 0;
         list-style-type: none;
 
-        li{
-            &:first-child{
+        li {
+            &:first-child {
                 margin-right: 20px;
             }
             letter-spacing: 4px;
@@ -40,22 +36,58 @@ body{
             text-transform: uppercase;
         }
     }
+    h2 {
+        margin: 0px;
+        text-align: center;
+    }
+    h4 {
+        text-align: center;
+        margin: 0px;
+    }
+    div {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        h4 {
+            &:nth-child(2) {
+                margin-left: 20px;
+            }
+        }
+    }
 }
 
-#stats{
-    text-align: end;
+#stats {
+    text-transform: uppercase;
+    text-align: center;
+    h2 {
+        letter-spacing: 4px;
+        font-size: 2rem;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+    p {
+        margin-top: 0;
+        margin-bottom: 30px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
 }
 
-#image{
+#image {
+    width: 600px;
     margin: 20px;
-}
-img{
-    height: 500px;
-    background-repeat: no-repeat;
-    color: white;
+    img {
+        margin: auto;
+        min-width: 350px;
+        max-width: 450px;
+
+        background-repeat: no-repeat;
+        color: white;
+    }
 }
 
-@font-face{
+@font-face {
     font-family: "pokeFont";
     src: url("../PokeSolid.ttf");
 }

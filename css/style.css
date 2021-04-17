@@ -7,6 +7,10 @@
           box-sizing: border-box;
 }
 
+html {
+  background: url("../pages/images/backgroundhome.jpg");
+}
+
 body h1 {
   margin: 30px 0;
   font-size: 3.5rem;

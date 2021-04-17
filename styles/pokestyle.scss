@@ -5,3 +5,11 @@ body{
     background-repeat: no-repeat;
     color: white;
 }
+
+h1, p{
+    font-family: pokeFont;
+}
+@font-face{
+    font-family: pokeFont;
+    src: url("../PokeSolid.ttf");
+}

@@ -3,6 +3,8 @@ body {
   background: linear-gradient(#FFE26f, #F15F3E) no-repeat center center fixed;
   background-size: cover;
   color: black;
+  font-family: "pokeFont";
+  letter-spacing: 2px;
 }
 
 .container {
@@ -36,6 +38,7 @@ body {
 }
 
 #id ul li {
+  letter-spacing: 4px;
   font-size: 2rem;
   font-weight: bold;
   text-transform: uppercase;
@@ -55,5 +58,12 @@ body {
 
 img {
   height: 500px;
+  background-repeat: no-repeat;
+  color: white;
+}
+
+@font-face {
+  font-family: "pokeFont";
+  src: url("../PokeSolid.ttf");
 }
 /*# sourceMappingURL=pokestyle.css.map */

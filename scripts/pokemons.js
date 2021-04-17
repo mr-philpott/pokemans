@@ -229,7 +229,6 @@ let charizard = `{
 // when the page loads get which page it is
 //load the page depending on which page you're on
 window.addEventListener('load', function () {
-  // document.body.style.backgroundImage = "url('../pages/images/Background.jpg')";
   let file = window.location.pathname;
   file = file.split('/');
   for (i in file) {
@@ -243,6 +242,7 @@ window.addEventListener('load', function () {
 
   let pokeObj;
   if (file == 'charmander') {
+
     pokeObj = JSON.parse(charmander)
   }
   if (file == 'charmeleon') {
@@ -254,25 +254,42 @@ window.addEventListener('load', function () {
 
   let id = document.getElementById('id');
   let stats = document.getElementById('stats');
-  let img = document.getElementById('image')
+  let imgDiv = document.getElementById('image');
+
+  let img = document.createElement("img");
+  if (file == 'charmander') {
+    img.src = "../pages/images/Charmander.png";
+    imgDiv.appendChild(img);
+  }
+  if (file == 'charmeleon') {
+    img.src = "../pages/images/Charmeleon.png";
+    imgDiv.appendChild(img);
+  }
+  if (file == 'charizard') {
+    img.src = "../pages/images/Charizard.png";
+    imgDiv.appendChild(img);
+  }
 
   createIdDiv(pokeObj)
   createStatsDiv(pokeObj)
 
 
   function createIdDiv(obj) {
+    const LIST1 = document.createElement('ul');
     // NAME
-    const NAME = document.createElement('h1');
+    const NAME = document.createElement('li');
     NAME.textContent = obj["name"];
-    id.appendChild(NAME);
+    LIST1.appendChild(NAME)
+    id.appendChild(LIST1);
 
     // ID
-    const ID = document.createElement('h1');
+    const ID = document.createElement('li');
     ID.textContent = `#00${obj["id"]}`;
-    id.appendChild(ID);
+    LIST1.appendChild(ID)
+    id.appendChild(LIST1);
 
     // BASE EXPERIENCE
-    const XP = document.createElement('h3');
+    const XP = document.createElement('h4');
     XP.textContent = `Base XP: ${obj["base_experience"]}`;
     id.appendChild(XP);
 
@@ -284,7 +301,7 @@ window.addEventListener('load', function () {
       const TYPE = TYPES[type]["type"];
       const { name } = TYPE;
 
-      const ITEM1 = document.createElement('p');
+      const ITEM1 = document.createElement('h4');
       ITEM1.textContent = name;
       DIV.appendChild(ITEM1)
       id.appendChild(DIV)
@@ -294,10 +311,10 @@ window.addEventListener('load', function () {
     const HEIGHT = document.createElement('h4');
     let height = String(obj["height"])
     height = height.split('')
-    if(height.length ==  1){
+    if (height.length == 1) {
       height.splice(height.length - 1, 0, '.');
       height = `0${height.join('')} m`;
-    }else{
+    } else {
       height.splice(height.length - 1, 0, '.');
       height = `${height.join('')} m`;
     }
@@ -322,11 +339,11 @@ window.addEventListener('load', function () {
     for (stat of STAT) {
       const { base_stat } = stat
       const name = stat.stat.name;
-      const LIST = document.createElement("p")
-      LIST.textContent = name + " " + base_stat
-      stats.appendChild(LIST)
+      const PARA = document.createElement("p")
+      PARA.textContent = name + " " + base_stat
+      stats.appendChild(PARA)
     }
-    
+
   }
 
 });

@@ -9,6 +9,7 @@ The purpose of this project was to create a pokemon landing page, nicely display
 ###  April 9, 2021
 
 **AyJay** : Worked on the main index.html and style.scss
+
 **Nysa** : Index.html for the three pokemons, and added the inputs to the main.js
 
 

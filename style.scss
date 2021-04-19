@@ -6,18 +6,19 @@
     box-sizing: border-box;
 }
 html{
-background: url("../pages/images/backgroundhome.jpg")
+    background: url("../pages/images/backgroundhome.jpg") no-repeat center center fixed;
+    background-size: cover;
 }
 body {
     h1 {
-        margin: 30px 0;
+        margin: 90px 0;
         font-size: 3.5rem;
         text-align: center;
     }
 }
 
 .container {
-    margin-top: 60px;
+    margin-top: 120px;
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-evenly;
@@ -71,9 +72,14 @@ body {
 footer {
 	position: fixed;
 	width: 100%;
+    height: 40px;
 	left: 0;
 	bottom: 0;
 	background-color: #2a75bb;
 	color: white;
-	text-align: center;
+    display: flex;
+    p{
+        text-align: center;
+        margin: auto;
+    }
 }

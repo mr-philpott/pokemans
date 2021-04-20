@@ -4,6 +4,7 @@ body {
     color: black;
     font-family: "pokeFont";
     letter-spacing: 2px;
+    margin: 5%;
 }
 
 .container {
@@ -13,7 +14,7 @@ body {
     justify-content: space-evenly;
 
     div {
-        width: 350px;
+        min-width: 350px;
         display: flex;
         flex-direction: column;
     }
@@ -59,6 +60,7 @@ body {
 #stats {
     text-transform: uppercase;
     text-align: center;
+    justify-content: center;
     h2 {
         letter-spacing: 4px;
         font-size: 2rem;
